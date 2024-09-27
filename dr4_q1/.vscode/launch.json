@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-Dr4EurekaServerApplication<dr4_eurekaServer>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.luanribeiro.dr4_eurekaServer.Dr4EurekaServerApplication",
+      "projectName": "dr4_eurekaServer",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-Dr41Application<dr4_1>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.luanribeiro.dr4_1.Dr41Application",
+      "projectName": "dr4_1",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+services:
+  eureka:
+    image: luanribeir/dr4eureka:latest
+    ports:
+      - "8761:8761"
+  veiculo:
+    image: luanribeir/dr4veiculo:latest
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka

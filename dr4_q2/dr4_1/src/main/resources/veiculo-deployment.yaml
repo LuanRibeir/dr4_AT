@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: veiculo
+spec:
+  selector:
+    matchLabels:
+      app: veiculo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: veiculo
+    spec:
+      containers:
+        - name: veiculo
+          image: luanribeir/dr4veiculo:latest
+          ports:
+            - containerPort: 8081
+          env:
+            - name: eureka
+              value: "http://eureka:8761/eureka/"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: veiculo
+spec:
+  selector:
+    app: veiculo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8081
+  type: LoadBalancer
